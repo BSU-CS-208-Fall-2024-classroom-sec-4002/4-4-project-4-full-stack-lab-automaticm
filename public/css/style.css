@@ -1,3 +1,22 @@
 body{
-    background-color: hotpink;
+    background-color: #a18c4f;
+}
+
+h1, form, li{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input{
+    background-color: #a4956b;
+    margin-right: 5px;
+}
+
+span{
+    border: 3px solid black;
+    padding: 10px;
+    display: inline-block;
+}
+
+hr{
+    border-color:black;
 }

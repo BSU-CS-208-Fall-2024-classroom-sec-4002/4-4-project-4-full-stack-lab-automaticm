@@ -1,8 +1,19 @@
 doctype html
-link(rel='stylesheet' href='css/style.css')
-
+link(rel='stylesheet', href='css/style.css')
 head
-    title My First Full Stack
+  title My First Full Stack
+  h1 Agenda | To Do List
 body
-    h1 Simple TODO APP
-    p TODO: Complete the app!
+    form(action='/', method="post")
+        label(for='todo') Add a task: 
+        input(type='text', name='task')
+        input(type='submit', value='Add')
+    hr
+    h1 List of Tasks
+    span
+        ul
+        - for (let i = 0; i < tasks.length; i++)
+            li= "Task " + tasks[i].id + ": " + tasks[i].task
+                form(action="/delete", method="post")
+                    input(type="hidden", name="id" value=tasks[i].id)
+                    input(type="submit", value="Delete")
